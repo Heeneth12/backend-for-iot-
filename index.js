@@ -4,13 +4,6 @@ const http = require("http");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "http://192.168.137.97", // Replace with the IP address of your ESP32
-    optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
-  })
-);
-
 const port = 3001;
 
 const server = http.createServer((req, res) => {
